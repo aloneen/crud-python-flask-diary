@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<title>Mini Diary</title>
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+<div class="content">
+    <h1>
+        Mini Diary
+    </h1>
+
+    {% if tasks | length < 1 %}
+    <h3>
+        There are Nothing... change it.
+    </h3>
+
+    {% else %}
+
+    <table>
+
+
+        <tr>
+            <th>Note</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.content}}</td>
+            <td>{{task.created.strftime("%Y-%m-%d")}}</td>
+            <td>
+                <a href="/delete/{{task.id}}" id="del">Delete</a>
+                <br>
+                <a href="/edit/{{task.id}}">Edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% endif %}
+
+    <form action="/" method="POST">
+        
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add note" id="btn_Add">
+
+    </form>
+
+</div>
+
+{% endblock %}

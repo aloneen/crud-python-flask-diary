@@ -20,7 +20,7 @@ Mini Diary is a Python Flask application for managing personal diary entries. Th
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/<your-github-username>/crud-python-flask-diary.git
+    git clone https://github.com/<aloneen>/crud-python-flask-diary.git
     cd crud-python-flask-diary
     ```
 
@@ -82,7 +82,7 @@ Mini Diary - это приложение на Python Flask для управле
 
 1. **Клонируйте репозиторий**:
     ```sh
-    git clone https://github.com/<your-github-username>/crud-python-flask-diary.git
+    git clone https://github.com/<aloneen>/crud-python-flask-diary.git
     cd crud-python-flask-diary
     ```
 
